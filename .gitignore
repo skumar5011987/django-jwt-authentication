@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Virtualenv
+env/
+venv/
+ENV/
+.venv/
+.env
+
+# Django stuff
+*.sqlite3
+db.sqlite3
+/media/
+/staticfiles/
+/static_root/
+/media_root/
+
+# Django migration files (optional, if you want to ignore them)
+# ** Uncomment if you don't want to track migrations
+# */migrations/
+# */migrations/*.py
+# */migrations/*.pyc
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+
+# Secrets
+*.env
+.env.local
+.env.*
+
+# Celery beat schedule
+celerybeat-schedule
+celerybeat.pid
