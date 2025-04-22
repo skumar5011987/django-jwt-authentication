@@ -18,7 +18,9 @@ class LoginAPIView(generics.GenericAPIView):
     def post(self, request, *args, **kwargs):
         username = request.data.get("username")
         password = request.data.get("password")
-
+        serializer = self.serializer_class(data=request.data)
+        if not serializer.is_valid():
+            return Response({"error":serializer.error}, status=401)
         user = authenticate(username=username, password=password)
         if user is not None:
             refresh = RefreshToken.for_user(user=user)
